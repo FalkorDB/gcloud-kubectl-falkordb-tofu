@@ -23,5 +23,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: falkordb/falkordb-pod-labeler:${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/v') && github.ref || 'edge'}}, falkordb/falkordb-pod-labeler:latest
+          tags: falkordb/gcloud-kubectl-falkordb:${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/v') && github.ref || 'edge'}}, falkordb/gcloud-kubectl-falkordb:latest
           context: .
