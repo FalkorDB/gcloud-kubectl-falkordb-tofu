@@ -1,4 +1,4 @@
-# GCLOUD + REDIS + KUBECTL Image
+# GCLOUD + KUBECTL + REDIS Image
 
 [![Build and Push Docker Image](https://github.com/dudizimber/gcloud-kubectl-redis/actions/workflows/build-and-push.yml/badge.svg)](https://github.com/dudizimber/gcloud-kubectl-redis/actions/workflows/build-and-push.yml)
 
