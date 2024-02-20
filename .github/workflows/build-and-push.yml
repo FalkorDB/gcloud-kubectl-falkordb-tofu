@@ -20,5 +20,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}, ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+          tags: FalkorDB/${{ env.IMAGE_NAME }}:${{ github.sha }}, FalkorDB/${{ env.IMAGE_NAME }}:latest
           context: .
