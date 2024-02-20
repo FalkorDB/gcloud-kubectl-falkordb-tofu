@@ -2,7 +2,10 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches: [master]
+    tags:
+      - v*
+    branches: 
+      - master
 
 env:
     IMAGE_NAME: gcloud-kubectl-falkordb
@@ -20,5 +23,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: falkordb/${{ env.IMAGE_NAME }}:${{ github.sha }}, falkordb/${{ env.IMAGE_NAME }}:latest
+          tags: falkordb/falkordb-pod-labeler:${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/v') && github.ref || 'edge'}}, falkordb/falkordb-pod-labeler:latest
           context: .
