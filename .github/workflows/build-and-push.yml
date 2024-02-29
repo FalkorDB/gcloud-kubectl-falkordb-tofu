@@ -23,5 +23,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: falkordb/${{ env.IMAGE_NAME }}:${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/v') && github.ref || 'edge'}}, falkordb/${{ env.IMAGE_NAME }}:latest
+          tags: falkordb/${{ env.IMAGE_NAME }}:${{ github.event_name == 'push' && contains(github.ref, 'refs/tags/v') && github.ref_name || 'edge'}}, falkordb/${{ env.IMAGE_NAME }}:latest
           context: .
